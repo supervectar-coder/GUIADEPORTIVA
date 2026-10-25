@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SUPERVECTAR GUIA PROGRAMACION DEPORTIVA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Launcher SUPERVECTAR TV - Deportes, TV, Películas y Series">
+
+<style>
+:root {
+    --bg: #ffffff; /* ⚪ FONDO BLANCO */
+    --primary: #0a3d62;
+    --text: #111111; /* 🔤 TEXTO OSCURO */
+    --btn: #f1f1f1; /* BOTONES CLAROS */
+    --btn-hover: #e0e0e0;
+    --btn-text: #ff3b3b; /* 🔴 ROJO */
+    --glow: rgba(255, 0, 0, 0.5);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 95vh;
+    width: 95vw;
+}
+
+/* LOGO */
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 10px auto 5px;
+    display: block;
+    box-shadow: 0 0 15px var(--glow);
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    from { box-shadow: 0 0 10px var(--glow); }
+    to { box-shadow: 0 0 25px var(--glow); }
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--btn-text);
+    text-shadow: 0 0 12px var(--glow);
+    animation: neonTitle 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonTitle {
+    from { text-shadow: 0 0 12px var(--glow); }
+    to { text-shadow: 0 0 25px var(--glow), 0 0 40px var(--glow); }
+}
+
+.icon-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 20px;
+}
+
+.app-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: var(--btn-text);
+    background: var(--btn);
+    font-weight: bold;
+    text-decoration: none;
+    transition: .25s;
+    box-shadow: 0 0 10px #ccc;
+    border: 1px solid #ddd;
+}
+
+.app-btn:hover, .app-btn:focus {
+    background: var(--btn-hover);
+    box-shadow: 0 0 12px var(--glow), 0 0 25px var(--glow);
+    outline: none;
+    transform: scale(1.05);
+}
+
+.app-btn:active {
+    transform: scale(.92);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+:focus-visible {
+    outline: 3px solid red;
+    border-radius: 30px;
+}
+
+/* 📱 Móvil */
+.mobile-ui .app-btn {
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* 🖥️ PC */
+.pc-ui .app-btn {
+    padding: 40px;
+    font-size: 22px;
+}
+
+/* 📺 TV */
+.tv-ui .app-btn {
+    padding: 35px;
+    font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+<div class="app-container">
+
+<img src="https://i.ibb.co/5g872cq7/DEP.jpg" alt="Logo SUPERVECTAR" class="logo">
+
+<h1>SUPERVECTAR GUIA PROGRAMACION DEPORTIVA</h1>
+
+
+<div class="icon-grid">
+
+<a class="app-btn" href="https://www.movistarplus.es/guiamovil">
+<img class="icon" src="https://i.postimg.cc/J7FMTxpB/movistar-new.png"> MOVISTAR+
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/laliga2">
+<img class="icon" src="https://i.postimg.cc/SQ5N74BP/ligahyper.png"> LIGA HYPERMOTION
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/laliga">
+<img class="icon" src="https://i.postimg.cc/0NV3skxd/laliga.png"> LA LIGA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/superliga-femenina">
+<img class="icon" src="https://i.postimg.cc/gJSPNynp/laliga-F.png"> LIGA F
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/champions-league">
+<img class="icon" src="https://i.postimg.cc/Bnkmk8dp/champions.png"> CHAMPIONS LEAGUE
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/womens-champions-league">
+<img class="icon" src="https://i.postimg.cc/Dwxc3SHH/champions-fem.png"> CHAMPIONS LEAGUE F
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/europa-league">
+<img class="icon" src="https://i.postimg.cc/C50vLWNQ/europa-league.png"> EUROPA LEAGUE
+</a>
+
+<a class="app-btn" href="https://www.futboltv.info/competicion/europa-conference-league">
+<img class="icon" src="https://i.postimg.cc/tCXS0G71/conference.png"> CONFERENCE LEAGUE
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/supercopa-espana">
+<img class="icon" src="https://i.postimg.cc/L5NLj7t5/supercopa-espana.png"> SUPERCOPA DE ESPAÑA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/supercopa-espana-femenina">
+<img class="icon" src="https://i.postimg.cc/RZjf1wH7/supercopa-new.png"> SUPERCOPA DE ESPAÑA F
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/copa-del-rey">
+<img class="icon" src="https://i.postimg.cc/Kv0BbyFZ/copa-rey.png"> COPA DEL REY
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/copa-de-la-reina">
+<img class="icon" src="https://i.postimg.cc/3rvpMtFd/copa-reina.png"> COPA DE LA REINA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/ligue-1">
+<img class="icon" src="https://i.postimg.cc/Gt8Q8DNz/ligue1.png"> LIGUE 1 FRANCIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/premier-league">
+<img class="icon" src="https://i.postimg.cc/SxXynv1h/premier.png"> PREMIER LEAGUE INGLATERRA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/bundesliga">
+<img class="icon" src="https://i.postimg.cc/ZqthCKy8/bundesliga.png"> BUNDESLIGA ALEMANIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/bundesliga-femenina">
+<img class="icon" src="https://i.postimg.cc/ZqthCKy8/bundesliga.png"> BUNDESLIGA F ALEMANIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/calcio-serie-a">
+<img class="icon" src="https://i.postimg.cc/L6Vqk5pV/seier-A.png"> SERIE A ITALIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/seria-a-femminile">
+<img class="icon" src="https://i.postimg.cc/L6Vqk5pV/seier-A.png"> SERIE A F ITALIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/supercopa-italia">
+<img class="icon" src="https://i.postimg.cc/RVmmS0Kw/supercopa-de-italia.png"> SUPERCOPPA ITALIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/competicion/copa-de-italia">
+<img class="icon" src="https://i.postimg.cc/pdChZ7v6/copa-italia.png"> COPPA ITALIA
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/baloncesto/competicion/liga-endesa">
+<img class="icon" src="https://as01.epimg.net/baloncesto/imagenes/2017/07/25/acb/1501004759_569854_1501004993_noticia_normal.jpg"> LIGA ENDESA BALONCESTO
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/baloncesto/competicion/nba">
+<img class="icon" src="https://i.ibb.co/ysP3vZt/logo-category-NBA.png"> NBA BALONCESTO
+</a>
+
+<a class="app-btn" href="https://www.marca.com/motor/formula1/calendario.html">
+<img class="icon" src="https://i.ibb.co/sWgvCCK/logo-f1-fix.png"> FORMULA 1
+</a>
+
+<a class="app-btn" href="https://www.marca.com/motor/motogp/calendario.html">
+<img class="icon" src="https://i.ibb.co/F8KYhbj/logo-motogp-fix.png"> MOTO GP
+</a>
+
+<a class="app-btn" href="https://www.worldsbk.com/es/calendario">
+<img class="icon" src="https://i.postimg.cc/qq5dFDTh/sbk-2d-portrait-fullcol-ondark-site-full.jpg"> SBK SUPERBIKE
+</a>
+
+<a class="app-btn" href="https://www.ufcespanol.com/events">
+<img class="icon" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnVqFaYDUDqXGWIgRjCm5_A3LBERIGSQ4rJAsgs0_QGPMDlQVc7P96XwdAHkf7Ggas08GoLAisVy_1iLiRWJXO4M_KVuimVvgnnK1jgSY9qKbDgT4FKcyJ88KFEIJlCZno_VvC-78yMx9wOepccMbgGjMHDL6OsDwVBnUmEmL5ywiEwfFKxPGLTRapzjmo/w664-h226/logo_ufc.png"> UFC
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/tenis">
+<img class="icon" src="https://i.ibb.co/2hzzxFG/logo-Tenis.png"> TENIS
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/beisbol/competicion/major-league-baseball">
+<img class="icon" src="https://logos-marcas.com/wp-content/uploads/2021/09/MLB-Logo.png"> BEISBOL
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/futbol-americano">
+<img class="icon" src="https://i.ibb.co/1Ggb57C/logo-NFL.png"> RUGBY
+</a>
+
+<a class="app-btn" href="https://www.futbolenlatv.es/deporte/hockey/competicion/national-hockey-league">
+<img class="icon" src="https://i.ibb.co/868xpk5/logo-NHL.png"> HOCKEY
+</a>
+
+
+
+</div>
+</div>
+
+<script>
+function detectDevice() {
+    const ua = navigator.userAgent.toLowerCase();
+
+    if (/tv|smart|tizen|webos|android tv/.test(ua)) {
+        document.body.classList.add("tv-ui");
+    } else if (/mobile|android|iphone/.test(ua)) {
+        document.body.classList.add("mobile-ui");
+    } else {
+        document.body.classList.add("pc-ui");
+    }
+}
+detectDevice();
+</script>
+
+</body>
+</html>
